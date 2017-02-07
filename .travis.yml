@@ -17,7 +17,7 @@ install:
 
 script:
 - if [[ $TRAVIS_BRANCH == "master" ]]; then
-    grunt build;
+    grunt build && grunt deploy --bucket=dasmicrobot.com;
   else
     grunt build;
   fi;
