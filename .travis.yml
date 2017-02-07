@@ -1,0 +1,23 @@
+sudo: false
+language: node_js
+
+env:
+  global:
+    - secure: ""
+    - secure: ""
+
+
+before_install:
+- rvm install 2.3.1
+- npm install -g grunt-cli
+- export PATH=$HOME/.local/bin:${PATH}
+
+install:
+- npm install
+
+script:
+- if [[ $TRAVIS_BRANCH == "master" ]]; then
+    grunt build;
+  else
+    grunt build;
+  fi;
