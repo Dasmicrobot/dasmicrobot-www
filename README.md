@@ -1,6 +1,8 @@
 "Under construction" page
 ================
 
+[![Build Status](https://travis-ci.org/Dasmicrobot/dasmicrobot-underconstruction.svg?branch=master)](https://travis-ci.org/Dasmicrobot/dasmicrobot-underconstruction)
+
 ### Requirements
 
 - Installed `node.js`
