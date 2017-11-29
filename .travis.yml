@@ -6,10 +6,10 @@ env:
   - secure: g+QiCcFHcF50BOcTS/MhiQSb8tN3oLBojwkvIxiyiQbPdctsurK8qu3SlUXPbhM1ZYZAAcibMFYuZ5b40GJh6u44o4dnJk1VdC0TF3N8vM/9Hgz626uuSn0/88GDtF6I1GVat4+1T85ulBWUO8TWVCli36y6u2mktqaWK/ljUryNZlTnK/g2Rylw/anPbD3FTudpXtngdXupv7XG78i51jYVGeB3mLXS7ZRwuP/9Opv+MCKvJZQeIoY0OB8H0Mbwo5sY2Fr8maQtsIEb7RauJGFG62ya6l5BPhE8oDMQsfG1/41uGpEZOVCc5hCbXLyHqUecFLhxSzR3NP0jA0mXoq2x2rKcE44pOMka6EysZrVxZ60G4+/dQ/hDo5Vb5S1VAFxs9HjSU2JRtkWQqU++P6L2HINoL2d+mgZtlDmp1r0bSexLK4gPf9YsjkoTWdYcRabvZ+TMZJySHGKufaXg3MbxKfIxXlXOkIjYKt9ywMgCchVNhbdx9xIVlAQ8uiYZ+tTyrEpuCABWgmk2No1DqHI8nRsj+6Hol4nAwMCCNr4MkAg8H1RGMzFD8VKIkbtA5OJe6gEZ2wxD3a6Oz7kNWS23LEz1yppfH4xDO51Zf9+KIcpxnmDLw4+CCyIUhA4W2Tnktk1TLwsx3RxmpdWZEnFUmp2JXzTpDbnOBWVgRHw=
 before_install:
 - rvm install 2.3.1
-- npm install -g grunt-cli
+- npm i -g grunt-cli
 - export PATH=$HOME/.local/bin:${PATH}
 install:
-- npm install
+- npm i
 script:
 - if [[ $TRAVIS_BRANCH == "master" ]]; then grunt build && grunt deploy --bucket=dasmicrobot.com;
   else grunt build; fi;
