@@ -33,15 +33,38 @@
   </script>
 
 </head>
-<body onload="start()" onresize="resize()" onorientationchange="resize()"
-      onmousedown="context.fillStyle='rgba(255,255,255,'+opacity+')'" onmouseup="context.fillStyle='rgb(255,255,255)'">
+<body>
 
-<canvas id="starfield" style="background-color:#FFFFFF"></canvas>
+<header>
+  <img class="logo" src="logo.svg" alt="das+mic+ro+bot"/>
+</header>
 
-<div class="box">
-  <h1>Dasmicrobot Ltd</h1>
-  <h2>Site is under development</h2>
-</div>
+<section class="content">
+
+  <article class="boxes">
+
+    <section class="box">
+      <h2>Open source</h2>
+      <a href="https://github.com/Dasmicrobot">Gihub</a>
+    </section>
+
+    <section class="box">
+      <h2>Get in touch</h2>
+      <a href="mailto:ivar.prudnikov@gmail.com">Send an email</a>
+    </section>
+
+  </article>
+
+</section>
+
+<footer>
+  <ul>
+    <li>Dasmicrobot Limited</li>
+    <li>Registered in Ireland (EU)</li>
+    <li>Registration No: 597108</li>
+    <li>VAT No.: 3452822VH</li>
+  </ul>
+</footer>
 
 <!-- build:js js/main.js -->
 <script src="js/main.js"></script>
