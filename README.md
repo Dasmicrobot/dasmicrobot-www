@@ -17,3 +17,4 @@
 ### Travis integration
 
 Travis script runs build on every commit and when on `master` will push site to S3 bucket as well
+
