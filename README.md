@@ -1,7 +1,7 @@
 dasmicrobot.com
 ================
 
-[![Build Status](https://travis-ci.org/Dasmicrobot/dasmicrobot-underconstruction.svg?branch=master)](https://travis-ci.org/Dasmicrobot/dasmicrobot-underconstruction)
+[![Build Status](https://travis-ci.org/Dasmicrobot/dasmicrobot-www.svg?branch=master)](https://travis-ci.org/Dasmicrobot/dasmicrobot-www)
 
 ### Requirements
 
