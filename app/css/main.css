@@ -20,6 +20,7 @@ h1, h2, h3 {
 header {
   padding: 20px;
   flex: 0 1 auto;
+  position: relative;
 }
 
 img.logo {
@@ -28,7 +29,42 @@ img.logo {
   height: 100px;
 }
 
-.main-content {}
+header .title {
+  font-size: 24px;
+  text-align: right;
+  margin: 0 0 10px 80px;
+  line-height: 1.1;
+}
+
+header .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  transform: rotate(3deg) skewX(3deg) scale(1.1);
+  transform-origin: bottom right;
+}
+
+@media all and (min-width: 800px) {
+  header .bg {
+    transform: rotate(2deg) skewX(2deg) scale(1.1);
+  }
+}
+
+@media all and (min-width: 1140px) {
+  header .bg {
+    transform: rotate(1deg) skewX(1deg) scale(1.1);
+  }
+}
+
+.main-content {
+  flex: 1 1 auto;
+  padding: 20px;
+}
 
 footer {
   padding: 20px;
@@ -52,14 +88,4 @@ footer ul li {
   display: inline-block;
   margin-right: 20px;
   padding: 0;
-}
-
-@media all and (min-width: 800px) {
-
-  header {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
 }
