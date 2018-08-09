@@ -1,12 +1,16 @@
 const path = require('path');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+
   devtool: 'eval-cheap-module-source-map',
 
   entry: {
-    landing: './app/js/main.js',
+    index: './app/page-index/main.js',
+    randd: './app/page-randd/main.js',
+    services: './app/page-services/main.js',
+    ico: './app/page-ico/main.js',
+    error: './app/page-error/main.js'
   },
 
   devServer: {
@@ -69,10 +73,37 @@ module.exports = {
       }
     ],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
-      template: './app/index.html',
-      inject: true
+      template: './app/page-index/tmpl.html',
+      inject: true,
+      chunks: ['index'],
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/page-randd/tmpl.html',
+      inject: true,
+      chunks: ['randd'],
+      filename: 'randd.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/page-services/tmpl.html',
+      inject: true,
+      chunks: ['services'],
+      filename: 'services.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/page-ico/tmpl.html',
+      inject: true,
+      chunks: ['ico'],
+      filename: 'ico.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/page-error/tmpl.html',
+      inject: true,
+      chunks: ['error'],
+      filename: 'error.html'
     })
   ]
 };

@@ -23,7 +23,8 @@ header {
   position: relative;
 }
 
-img.logo {
+img.logo,
+.logo img {
   display: block;
   width: 70px;
   height: 100px;
