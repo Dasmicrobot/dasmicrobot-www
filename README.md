@@ -5,13 +5,14 @@ dasmicrobot.com
 
 ### Requirements
 
-- Installed `node.js`
+- Installed `node.js` with `npm`
 - Installed `Grunt` (`npm install grunt-cli`)
-- Installed dependencies `npm install`
+- Installed dependencies `npm i`
 
-### Grunt commands
+### Usage
 
-`grunt build` - will build site into `dist` directory with minified css and js files
+`npm start` - run the app in a local server
+`npm build` - will build compile sources into `dist` directory, ready for deployment
 `grunt deploy --bucket=myS3BucketName` - will push site to S3 bucket, provided that AWS key and secret env variables are correct
 
 ### Travis integration
