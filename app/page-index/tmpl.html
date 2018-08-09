@@ -1,25 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <title>Dasmicrobot Ltd</title>
-
   <meta charset="UTF-8">
   <meta http-equiv="cache-control" content="no-cache"/>
   <meta http-equiv="pragma" content="no-cache"/>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport"
         content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-
-  <!-- build:css css/main.css -->
-  <link href="../node_modules/normalize.css/normalize.css" media="all" rel="stylesheet">
-  <link href="css/main.css" media="all" rel="stylesheet">
-  <!-- endbuild -->
-
-  <!-- build:css css/home.css -->
-  <link href="css/home.css" media="all" rel="stylesheet">
-  <!-- endbuild -->
-
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 
@@ -38,19 +26,17 @@
 
     ga('create', 'UA-91540245-1', 'auto');
     ga('send', 'pageview');
-
   </script>
-
 </head>
 <body>
 
 <header>
-  <img class="logo" src="logo.svg" alt="das+mic+ro+bot"/>
+  <img class="logo" src="<%= require('./../images/logo.svg') %>" alt="das+mic+ro+bot" width="70" height="100"/>
 </header>
 
 <nav class="navigation">
 
-  <a class="stripe sme" href="sme-services.html">
+  <a class="stripe sme" href="services.html">
     <div class="bg"></div>
     <div class="fg">
       <span class="icon fa fa-briefcase"></span>
@@ -62,7 +48,7 @@
     </div>
   </a>
 
-  <a class="stripe ico" href="sme-ico.html">
+  <a class="stripe ico" href="ico.html">
     <div class="bg"></div>
     <div class="fg">
       <span class="icon fa fa-coins"></span>
@@ -74,7 +60,7 @@
     </div>
   </a>
 
-  <a class="stripe randd" href="research-development.html">
+  <a class="stripe randd" href="randd.html">
     <div class="bg"></div>
     <div class="fg">
       <span class="icon fa fa-atom"></span>
@@ -120,10 +106,6 @@
     <li>VAT No.: IE 3452822VH</li>
   </ul>
 </footer>
-
-<!-- build:js js/main.js -->
-<script src="js/main.js"></script>
-<!-- endbuild -->
 
 </body>
 </html>
