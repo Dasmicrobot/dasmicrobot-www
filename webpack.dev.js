@@ -4,7 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-cheap-module-source-map',
-  entry: './app/js/main.js',
+
+  entry: {
+    landing: './app/js/main.js',
+  },
+
   devServer: {
     port: 8080,
     contentBase: path.join(__dirname, "dist")
