@@ -14,7 +14,6 @@ module.exports = {
     index: './app/page-index/main.js',
     randd: './app/page-randd/main.js',
     services: './app/page-services/main.js',
-    ico: './app/page-ico/main.js',
     error: './app/page-error/main.js'
   },
   output: {
@@ -96,12 +95,6 @@ module.exports = {
       inject: 'body',
       chunks: ['services'],
       filename: 'services.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/page-ico/tmpl.html',
-      inject: 'body',
-      chunks: ['ico'],
-      filename: 'ico.html'
     }),
     new HtmlWebpackPlugin({
       template: './app/page-error/tmpl.html',
