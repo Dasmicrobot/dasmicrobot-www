@@ -14,6 +14,7 @@
   flex: 1 1 auto;
   box-sizing: border-box;
   justify-content: left;
+  transition: all 0.3s ease;
 }
 
 a.stripe {
@@ -54,15 +55,15 @@ a.stripe {
 }
 
 .stripe .title {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.1;
   margin: 0 15px 10px 50px;
-
+  font-weight: bold;
   transition: all ease 0.2s;
 }
 
 .stripe .description {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.1;
   margin: 0 15px 0 50px;
   max-width: 25em;
@@ -137,12 +138,12 @@ a.stripe {
   }
 
   .stripe .fg {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    margin-top: -60px;
     padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    flex-grow: 1;
   }
 
   .stripe .icon {
@@ -157,8 +158,9 @@ a.stripe {
   }
 
   .stripe .description {
-    opacity: 0;
+    display: none;
     margin: 0 0 10px;
+    text-align: center;
   }
 
   .stripe .icon-action {
@@ -170,13 +172,6 @@ a.stripe {
     transform: rotate(-20deg);
   }
 
-  .navigation > .stripe:hover {
-    min-width: 200px;
-  }
-
-  .navigation > .stripe:hover .description {
-    opacity: 1;
-  }
 }
 
 @media all and (min-width: 1140px) {
@@ -186,7 +181,7 @@ a.stripe {
   }
 
   .stripe .description {
-    opacity: 1;
+    display: block;
   }
 
 }
