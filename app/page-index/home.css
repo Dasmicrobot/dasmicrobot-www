@@ -41,7 +41,16 @@ a.stripe {
   bottom: 0;
   right: 0;
 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   transition: all ease 0.2s;
+}
+
+.stripe:hover .bg {
+  background-position: bottom;
+  filter: brightness(1.2);
 }
 
 .stripe .fg {
