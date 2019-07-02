@@ -1,4 +1,3 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -14,7 +13,7 @@ module.exports = {
 
   devServer: {
     port: 8080,
-    contentBase: path.join(__dirname, "dist")
+    writeToDisk: false // https://webpack.js.org/configuration/dev-server/#devserverwritetodisk-
   },
   module: {
     rules: [
@@ -23,39 +22,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['env']
+          presets: ['@babel/preset-env']
         }
       },
       {
-        test: /\.(scss|css)$/,
+        test: /\.css$/i,
         use: [
-          {
-            // creates style nodes from JS strings
-            loader: "style-loader",
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            // translates CSS into CommonJS
-            loader: "css-loader",
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            // compiles Sass to CSS
-            loader: "sass-loader",
-            options: {
-              outputStyle: 'expanded',
-              sourceMap: true,
-              sourceMapContents: true
-            }
-          }
+          'style-loader',
+          'css-loader'
           // Please note we are not running postcss here
         ]
-      }
-      ,
+      },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpg|gif|svg)$/,
