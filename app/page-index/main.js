@@ -1,6 +1,4 @@
-require('normalize.css/normalize.css');
-require('../css/main.css');
-require('./home.css');
+require('../css/theme.min.css');
 
 document.addEventListener("DOMContentLoaded", () => {
 

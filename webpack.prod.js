@@ -13,8 +13,6 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     index: './app/page-index/main.js',
-    randd: './app/page-randd/main.js',
-    services: './app/page-services/main.js',
     error: './app/page-error/main.js'
   },
   output: {
@@ -60,18 +58,6 @@ module.exports = {
       inject: 'body',
       chunks: ['index'],
       filename: 'index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/page-randd/tmpl.html',
-      inject: 'body',
-      chunks: ['randd'],
-      filename: 'randd.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/page-services/tmpl.html',
-      inject: 'body',
-      chunks: ['services'],
-      filename: 'services.html'
     }),
     new HtmlWebpackPlugin({
       template: './app/page-error/tmpl.html',
