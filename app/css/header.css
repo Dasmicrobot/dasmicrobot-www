@@ -1,0 +1,12 @@
+header .logo {
+  height: 100px;
+  width: 100px;
+  display: block;
+}
+
+header .logo img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  box-shadow: -7px 7px #eee;
+}
