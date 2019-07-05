@@ -15,8 +15,10 @@
     "preview": "npm run build && http-server dist"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "grunt": "^1.0.4",
     "grunt-aws": "^0.7.1",
+    "jquery": "^3.4.1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
