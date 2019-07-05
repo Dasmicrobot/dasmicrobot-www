@@ -6,8 +6,6 @@ module.exports = {
 
   entry: {
     index: './app/page-index/main.js',
-    randd: './app/page-randd/main.js',
-    services: './app/page-services/main.js',
     error: './app/page-error/main.js'
   },
 
@@ -56,18 +54,6 @@ module.exports = {
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/page-randd/tmpl.html',
-      inject: true,
-      chunks: ['randd'],
-      filename: 'randd.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/page-services/tmpl.html',
-      inject: true,
-      chunks: ['services'],
-      filename: 'services.html'
     }),
     new HtmlWebpackPlugin({
       template: './app/page-error/tmpl.html',
