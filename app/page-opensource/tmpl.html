@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dasmicrobot open source</title>
+  <%= require('html-loader!../partials/meta.html') %>
+  <%= require('html-loader!../partials/analytics.html') %>
+</head>
+<body>
+
+<%= require('html-loader!../partials/header.html') %>
+
+<main id="content" role="main">
+  <div class="">
+    <div class="container space-2">
+
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="card card-frame-highlighted mb-4">
+            <header class="card-header p-5">
+              <i class="fab fa-github mb-3 h3"></i>
+              <h4 class="h5">Text training/generating service based on LSTM network</h4>
+            </header>
+            <div class="card-body p-5">
+              <p class="mb-5">Purpose of the project was to test AI applicability in simple web flows. User trains AI agent by uploading his own text file which goes through <a href="https://www.tensorflow.org/">Tensorflow</a>. After training it can generate text similar to the one in uploaded sample.</p>
+              <a href="https://github.com/Dasmicrobot/char-rnn-tensorflow" target="_blank" class="btn btn-sm btn-block btn-soft-primary transition-3d-hover">Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="card card-frame-highlighted mb-4">
+            <header class="card-header p-5">
+              <i class="fab fa-github mb-3 h3"></i>
+              <h4 class="h5">Face detection using webcam image capture</h4>
+            </header>
+            <div class="card-body p-5">
+              <p class="mb-5">
+                Simple web application which processes web cam video stream to detect faces in it. User is able to see detection in near real time by looking into camera preview.
+              </p>
+              <a href="https://github.com/Dasmicrobot/facial-keypoints" target="_blank" class="btn btn-sm btn-block btn-soft-primary transition-3d-hover">Details</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<%= require('html-loader!../partials/footer.html') %>
+
+</body>
+</html>

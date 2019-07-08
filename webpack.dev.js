@@ -6,6 +6,7 @@ module.exports = {
 
   entry: {
     index: './app/page-index/main.js',
+    opensource: './app/page-opensource/main.js',
     error: './app/page-error/main.js'
   },
 
@@ -54,6 +55,12 @@ module.exports = {
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/page-opensource/tmpl.html',
+      inject: true,
+      chunks: ['opensource'],
+      filename: 'opensource.html'
     }),
     new HtmlWebpackPlugin({
       template: './app/page-error/tmpl.html',
