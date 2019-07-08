@@ -10,22 +10,10 @@
 <%= require('html-loader!../partials/header.html') %>
 
 <main id="content" role="main">
-  <div class="">
-    <div class="container space-2">
 
-      <!-- Title -->
-      <div class="w-lg-80 text-center mx-lg-auto">
-        <div class="mb-11">
-          <h1 class="display-4 font-weight-semi-bold">About Us</h1>
-          <p class="lead font-weight-normal">Let us guide you through the maze of business growth and eliminate complexity step by step.</p>
-        </div>
-      </div>
-      <!-- End Title -->
+  <%= require('html-loader!./images.html') %>
+  <%= require('html-loader!./operations.html') %>
 
-      <%= require('html-loader?interpolate!./images.html') %>
-
-    </div>
-  </div>
 </main>
 
 <%= require('html-loader!../partials/footer.html') %>
