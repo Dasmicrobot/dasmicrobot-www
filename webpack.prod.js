@@ -1,20 +1,16 @@
 const path = require('path');
 
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //installed via npm
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
+const htmlConfig = require('./webpack.html.js');
 const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
   devtool: 'source-map',
-  entry: {
-    index: './app/page-index/main.js',
-    error: './app/page-error/main.js'
-  },
+  entry: htmlConfig.webpackEntries(),
   output: {
     filename: '[name].[hash:20].js',
     path: buildPath
@@ -52,19 +48,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(), // cleans output.path by default
-    new HtmlWebpackPlugin({
-      template: './app/page-index/tmpl.html',
-      inject: 'body',
-      chunks: ['index'],
-      filename: 'index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/page-error/tmpl.html',
-      inject: 'body',
-      chunks: ['error'],
-      filename: 'error.html'
-    }),
+    new CleanWebpackPlugin()  // cleans output.path by default
+  ].concat(htmlConfig.webpackHtmlPlugins()).concat([
     new FaviconsWebpackPlugin({
       // Your source logo
       logo: './app/images/logo.svg',
@@ -98,7 +83,7 @@ module.exports = {
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'
     })
-  ],
+  ]),
 
   // https://webpack.js.org/configuration/optimization/
   optimization: {
