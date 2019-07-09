@@ -1,15 +1,10 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const htmlConfig = require('./webpack.html.js');
 
 module.exports = {
 
   devtool: 'eval-cheap-module-source-map',
 
-  entry: {
-    index: './app/page-index/main.js',
-    opensource: './app/page-opensource/main.js',
-    about: './app/page-about/main.js',
-    error: './app/page-error/main.js'
-  },
+  entry: htmlConfig.webpackEntries(),
 
   devServer: {
     port: 8080,
@@ -50,30 +45,5 @@ module.exports = {
     ],
   },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './app/page-index/tmpl.html',
-      inject: true,
-      chunks: ['index'],
-      filename: 'index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/page-about/tmpl.html',
-      inject: true,
-      chunks: ['about'],
-      filename: 'about.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/page-opensource/tmpl.html',
-      inject: true,
-      chunks: ['opensource'],
-      filename: 'opensource.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/page-error/tmpl.html',
-      inject: true,
-      chunks: ['error'],
-      filename: 'error.html'
-    })
-  ]
+  plugins: htmlConfig.webpackHtmlPlugins()
 };
