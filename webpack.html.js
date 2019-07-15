@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const htmlPageNames = ['index', 'opensource', 'about', 'services', 'error'];
+const htmlPageNames = ['index', 'opensource', 'about', 'services', 'privacy', 'error'];
 
 /**
  * All static pages which require webpack processing
